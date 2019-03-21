@@ -1,0 +1,46 @@
+---
+title: "MXN601 Worksheet NUM"
+author: "Joshua Bon & Christopher Drovandi"
+date: "`r Sys.Date()`"
+output: tint::tintPdf
+bibliography: worksheets.bib
+link-citations: yes
+header-includes:
+    - \usepackage{fancyhdr}
+    - \usepackage{floatrow}
+    - \floatsetup[figure]{capposition=top}
+params:
+  tutor_name: "Chris"
+  show_solutions: FALSE
+---
+
+```{r template-header, child='../src/template-header.Rmd', eval = TRUE}
+
+```
+
+```{r ws-setup, include=FALSE}
+  # if problems with knitting directory:
+  # set Knit Directory = Document Directory
+
+  # install libraries needed for worksheet
+  library(dplyr)
+  library(ggplot2)
+
+  # Make notes here:
+  # --- chunk `instructions-header` currently turned off. 
+  #     Set `eval = TRUE` to use (and update file).
+  #
+  #
+
+```
+
+> QUOTE
+>
+> `r tint::quote_footer('---PERSON')` 
+
+```{r instructions-header, child='../src/instructions-header.Rmd', eval = FALSE, echo=FALSE}
+  
+```
+
+# Title
+
