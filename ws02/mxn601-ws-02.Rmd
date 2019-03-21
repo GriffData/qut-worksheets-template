@@ -1,9 +1,9 @@
 ---
-title: "MXN601 Worksheet NUM"
+title: "MXN601 Worksheet 02"
 author: "Joshua Bon & Christopher Drovandi"
 date: "`r Sys.Date()`"
 output: tint::tintPdf
-bibliography: worksheets.bib
+bibliography: ../src/worksheets.bib
 link-citations: yes
 header-includes:
     - \usepackage{fancyhdr}
@@ -42,5 +42,20 @@ params:
   
 ```
 
-# Title
+# Recap: SECTION
 
+# Theory questions
+
+**Question 1**
+
+```{r theory-question-1, child='../question-bank/00question-template.Rmd', eval = TRUE}
+  
+```
+
+```{r theory-solution-1, child='../solution-bank/00solution-template.Rmd', eval = params$show_solutions}
+  
+```
+
+# Practical questions
+
+**Question 10**

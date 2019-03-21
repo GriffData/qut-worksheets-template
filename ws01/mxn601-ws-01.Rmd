@@ -1,9 +1,9 @@
 ---
-title: "MXN601 Worksheet NUM"
+title: "MXN601 Worksheet 01"
 author: "Joshua Bon & Christopher Drovandi"
 date: "`r Sys.Date()`"
 output: tint::tintPdf
-bibliography: worksheets.bib
+bibliography: ../src/worksheets.bib
 link-citations: yes
 header-includes:
     - \usepackage{fancyhdr}
@@ -27,20 +27,39 @@ params:
   library(ggplot2)
 
   # Make notes here:
-  # --- chunk `instructions-header` currently turned off. 
+  # - chunk `instructions-header` currently turned off. 
   #     Set `eval = TRUE` to use (and update file).
   #
   #
 
 ```
 
-> QUOTE
+> A theory is just a mathematical model to describe the observations.
 >
-> `r tint::quote_footer('---PERSON')` 
+> `r tint::quote_footer('---Karl Popper')` 
+
+> All models are wrong, but some are useful.
+>
+> `r tint::quote_footer('---George E. P. Box')` 
 
 ```{r instructions-header, child='../src/instructions-header.Rmd', eval = FALSE, echo=FALSE}
   
 ```
 
-# Title
+# Recap: Multivariate distributions
 
+# Theory questions
+
+**Question 1**
+
+```{r theory-question-1, child='../question-bank/00question-template.Rmd', eval = TRUE}
+  
+```
+
+```{r theory-solution-1, child='../solution-bank/00solution-template.Rmd', eval = params$show_solutions}
+  
+```
+
+# Practical questions
+
+**Question 10**
