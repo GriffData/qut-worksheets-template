@@ -36,11 +36,11 @@ params:
 
 > A theory is just a mathematical model to describe the observations.
 >
-> `r tint::quote_footer('---Karl Popper')` 
+> `r tint::quote_footer('---Karl Popper')`^[[Sir Karl Popper](https://en.wikipedia.org/wiki/Karl_Popper) was one of the greatest 20th century philosophers of science. He is famous for championing [empirical falsification](https://en.wikipedia.org/wiki/Falsifiability), the basis of modern science.] 
 
 > All models are wrong, but some are useful.
 >
-> `r tint::quote_footer('---George E. P. Box')` 
+> `r tint::quote_footer('---George E. P. Box')`^[[Dr George Box](https://en.wikipedia.org/wiki/George_E._P._Box) was an eminent 20th century statistician. Box-Jenkins models and Box-Cox transformations are just some of his contributions.] 
 
 ```{r instructions-header, child='../src/instructions-header.Rmd', eval = FALSE, echo=FALSE}
   
@@ -50,16 +50,43 @@ params:
 
 # Theory questions
 
-**Question 1**
+## Question 1
 
-```{r theory-question-1, child='../question-bank/00question-template.Rmd', eval = TRUE}
+```{r theory-question-1, child='../question-bank/id0001-discrete-bivariate-rv-independence.Rmd', eval = TRUE}
   
 ```
 
-```{r theory-solution-1, child='../solution-bank/00solution-template.Rmd', eval = params$show_solutions}
+```{r theory-solution-1, child='../solution-bank/id0001-discrete-bivariate-rv-independence.Rmd', eval = params$show_solutions}
   
 ```
+
+
+## Question 2
+
+```{r theory-question-2, child='../question-bank/id0003-discrete-mix-poisson.Rmd', eval = TRUE}
+  
+```
+
+## Question 3
+
+```{r theory-question-3, child='../question-bank/id0002-compound-exp-exp.Rmd', eval = TRUE}
+
+```
+
+## Question 4
+
+```{r theory-question-4, child='../question-bank/id0004-multivariate-normal.Rmd', eval = TRUE}
+  
+```
+
+## Question 5
+Note open-ended 
+
+## Question 6
+Note open-ended
 
 # Practical questions
+
+
 
 **Question 10**
