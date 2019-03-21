@@ -1,0 +1,10 @@
+A Poisson distribution with rate $\lambda > 0$ has probability mass function
+$$
+f_{Y}(y~\vert~\lambda) = \frac{\lambda^{y}e^{-\lambda}}{y!} \quad \text{for} \quad y = 0,1,2,...
+$$
+Let $Y_{1}$ and $Y_{2}$ be Poisson random variable with rates $\lambda_{1}$ and $\lambda_{2}$ respectively. In addition, define $X$ to be a Bernoulli^[A Bernoulli random variable takes value $1$ with probability $p$ and value $0$ with probability $1-p$.] random variable with probability $p$. Assume $X$, $Y_{1}$, and $Y_{2}$ are independent.
+
+(a) Determine the means and variances of $X$, $Y_{1}$, and $Y_{2}$.
+(b) Define $Z = X~Y_{1} + (1-X)~Y_{2}$. What is the mean and variance of $Z$?^[Note: The random variable $Z$ is a discrete mixture distribution.]
+(c) What is the probability mass function (pmf) of $Z$?^[Hint: Start by determining the pmf for $Z~\vert~X$ ($Z$ conditioned on the value of $X$).] 
+(d) What is the correlation between $Z$ and $Y_{1}$? What about $Z$ and $X$?
