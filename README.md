@@ -2,7 +2,7 @@
 
 Developed by Joshua Bon and Chris Drovandi.
 
-# Project structure
+## Project structure
 
 - Each worksheet is a folder (`ws01` etc).
 - `question-bank` contains all questions (as individual files) used in worksheets.
