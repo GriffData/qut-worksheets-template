@@ -1,6 +1,6 @@
 # Worksheets for MXN601
 
-Developed by Joshua Bon and Chris Drovandi
+Developed by Joshua Bon and Chris Drovandi.
 
 ## Project structure
 
