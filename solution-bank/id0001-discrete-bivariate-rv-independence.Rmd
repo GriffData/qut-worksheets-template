@@ -1,0 +1,12 @@
+
+***
+*Solution*: Solution text here.
+
+(a) Why does the above table define a discrete random variable?
+(b) What are the marginal distributions for $X$ and $Y$?
+(c) What are the expectation and variance of $X$ and $Y$?
+(d) What is the correlation between $X$ and $Y$?
+(e) Show that the random variables $X$ and $Y$ are **not** independent.
+(f) Which two cells of the table can you switch to make $X$ and $Y$ independent? 
+
+***

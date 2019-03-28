@@ -40,14 +40,11 @@ params:
 
 > All models are wrong, but some are useful.
 >
-> `r tint::quote_footer('---George E. P. Box')`^[[Dr George Box](https://en.wikipedia.org/wiki/George_E._P._Box) was an eminent 20th century statistician. Box-Jenkins models and Box-Cox transformations are just some of his contributions.] 
+> `r tint::quote_footer('---George E. P. Box')`^[[Dr George Box](https://en.wikipedia.org/wiki/George_E._P._Box) was an eminent 20th century statistician. Box-Jenkins models and Box-Cox transformations are just some of his contributions to statistics.] 
 
 ```{r instructions-header, child='../src/instructions-header.Rmd', eval = FALSE, echo=FALSE}
   
 ```
-
-# Recap: Multivariate distributions
-Multivariate distributions concisely describe two or more random variables and their interdependent stochasticity. This is particularly useful when we have some phenomena where the outcomes are multivariate and dependent on each other. For example, the locations of sightings of feral foxes in Queensland will have a longitudinal and latitudinal value.
 
 # Theory questions
 
