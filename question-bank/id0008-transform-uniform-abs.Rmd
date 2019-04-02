@@ -1,0 +1,1 @@
+If $X$ has the uniform distribution on $(-1, 1)$, find the distribution of $\vert X \vert$.

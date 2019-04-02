@@ -34,21 +34,21 @@ params:
 
 ```
 
-> QUOTE
+> Facts are stubborn things, but statistics are pliable.
 >
-> `r tint::quote_footer('---PERSON')` 
+> `r tint::quote_footer('---Mark Twain')` 
 
 ```{r instructions-header, child='../src/instructions-header.Rmd', eval = FALSE, echo=FALSE}
   
 ```
 
-# Recap: SECTION
+# Recap: Transformations of Random Variables
 
 # Theory questions
 
-**Question 1**
+## Question 1
 
-```{r theory-question-1, child='../question-bank/00question-template.Rmd', eval = TRUE}
+```{r theory-question-1, child='../question-bank/id0006-transform-lognormal.Rmd', eval = TRUE}
   
 ```
 
@@ -56,6 +56,24 @@ params:
   
 ```
 
+## Question 2
+
+```{r theory-question-2, child='../question-bank/id0007-transform-gamma-exp.Rmd', eval = TRUE}
+  
+```
+
+## Question 3
+
+```{r theory-question-3, child='../question-bank/id0008-transform-uniform-abs.Rmd', eval = TRUE}
+  
+```
+
+## Question 4
+
+```{r theory-question-4, child='../question-bank/id0009-transform-gamma-sum-diff.Rmd', eval = TRUE}
+  
+```
+
 # Practical questions
 
-**Question 10**
+##Question 10

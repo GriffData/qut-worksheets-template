@@ -1,0 +1,5 @@
+Let  $X_1$, $X_2$  be independent gamma random variables, each with probability density function
+$$
+f_{X}(x~\vert~\theta) = \frac{x^{-1/2}e^{-x/\theta}}{(\pi\theta)^{1/2}}, \quad x>0, \theta>0
+$$
+Obtain the joint probability density function of $Y_1 = X_1 + X_2$ and $Y_2 = X_1 - X_2$. Are $Y_1$ and $Y_2$ independent?
