@@ -1,12 +1,60 @@
 
 ***
-*Solution*: Solution text here.
+*Solution*: 
 
-```{r unique-id-sols-chunk-1, cache=TRUE, echo=TRUE, eval=TRUE}
+```{r sim-mix-a, cache=TRUE, echo=TRUE, eval=TRUE}
   
-  y <- 1:10
-  x <- sum(y)
-  x
+  # (a)
+
+  sim_poisson_mix_2 <- function(lambda_1, lambda_2, p){
+    
+    x_bernoulli <- rbinom(n = 1, size = 1, prob = p)
+    
+    if(x_bernoulli == 1L){
+      
+      z_pois <- rpois(n = 1, lambda = lambda_1)
+    
+    } else {
+      
+      z_pois <- rpois(n = 1, lambda = lambda_2)
+      
+    }
+    
+    return(z_pois)
+    
+    # there are more efficient ways to code this...
+    # this code emphasises the construction of the
+    # random variable, but is not vectorised.
+    
+  }
+
+  lambda_1 <- 4
+  lambda_2 <- 10
+  p <- 0.4
+
+  pmix_samples <- replicate(n = 1000, sim_poisson_mix_2(lambda_1 = lambda_1, lambda_2 = lambda_2, p = p))
+
+
+  # theoretical mean and variance
+  mean_poisson_mix_2 <- function(lambda_1, lambda_2, p){
+    
+    p * lambda_1 + (1 - p) * lambda_2
+    
+  }
+  
+  var_poisson_mix_2 <- function(lambda_1, lambda_2, p){
+    
+    p * lambda_1 + (1 - p) * lambda_2 +  p * (1 - p) * (lambda_1 - lambda_2)^2
+    
+  }
+  
+  mean_poisson_mix_2(lambda_1 = lambda_1, lambda_2 = lambda_2, p = p)
+  var_poisson_mix_2(lambda_1 = lambda_1, lambda_2 = lambda_2, p = p)
+
+  
+  # mean and variance by simulation:
+  mean(pmix_samples)
+  var(pmix_samples)
 
 ```
 
