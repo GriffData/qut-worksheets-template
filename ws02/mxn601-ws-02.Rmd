@@ -42,8 +42,6 @@ params:
   
 ```
 
-# Recap: Transformations of Random Variables
-
 # Theory questions
 
 ## Question 1
@@ -76,4 +74,8 @@ params:
 
 # Practical questions
 
-##Question 10
+## Question 5
+
+```{r practical-question-5, child='../question-bank/id0011-transform-box-cox.Rmd', eval = TRUE}
+  
+```

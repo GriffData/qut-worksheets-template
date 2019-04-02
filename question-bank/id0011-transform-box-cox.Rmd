@@ -1,0 +1,11 @@
+The Box-Cox [@Box1964] transformation is a useful monotonic transformation of data (power transform). It is used with positive values, often in time series analysis, to stabilise variance and make observations closer to the normal distribution. The Box-Cox transofrmation can be defined as
+$$
+\eta (y;\lambda) = 
+\begin{cases}
+\frac{y^{\lambda}-1}{\lambda} & \text{if } \lambda \neq 0 \\
+\log y & \text{if } \lambda = 0.
+\end{cases}
+$$
+
+(a) Given observations `x <- c(0.07, 3.35, 35.58, 21.14, 0.15, 0.73, 8.47, 0.9, 0.43, 39.69, 3.19, 0.19, 4.24, 0.13, 6.09, 0.8, 171.8, 1.25, 48.03, 8.6)` determine a value for $\lambda$ which generates normal-like data^[Hint: you may want to use a KDE to estimate the density of the Box-Cox transformed data. Alternatively a Normal [Q-Q plot](https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot) may assist in determining how close to normality it is. Base `R` has function `qqnorm()` but it can also be plotted in `ggplot2`, see [documentation](https://ggplot2.tidyverse.org/reference/geom_qq.html).]. Justify your answer.
+(b) Using the value of $\lambda$ you have chosen, simulate normal data with mean and variance equivalent to the ($\lambda$) Box-Cox transformed data from (a). Calculate the reverse Box-Cox transform and compare the simulated data to the original data. Do they have similar distributions? Justify your answer^[Hint: you may want to use a KDE to assist you.].
