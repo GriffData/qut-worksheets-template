@@ -65,22 +65,35 @@ params:
   
 ```
 
+```{r theory-solution-2, child='../solution-bank/id0003-discrete-mix-poisson.Rmd', eval = params$show_solutions}
+  
+```
+
 ## Question 3
 
 ```{r theory-question-3, child='../question-bank/id0002-compound-exp-exp.Rmd', eval = TRUE}
 
 ```
 
-## Question 4
-
-```{r theory-question-4, child='../question-bank/id0004-bivariate-normal-marginal-conditional.Rmd', eval = TRUE}
+```{r theory-solution-3, child='../solution-bank/id0002-compound-exp-exp.Rmd', eval = params$show_solutions}
   
 ```
 
 # Practical questions
+
+We will now practise simulating some mixture random variables in `R`. 
+If necessary, use your answers in the theory section of this worksheet to assist you.
+
+## Question 4
+```{r prac-question-4, child='../question-bank/id0010-simulating-mixtures.Rmd', eval = TRUE}
+  
+```
 
 ## Question 5
 ```{r prac-question-5, child='../question-bank/id0005-multivariate-normal-anomaly-detection.Rmd', eval = TRUE}
   
 ```
 
+## Question 6
+
+simulating from some given joint distribution, then estimating say the marginal distributions from the samples using kde

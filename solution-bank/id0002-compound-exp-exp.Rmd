@@ -1,0 +1,30 @@
+
+***
+*Solution*: 
+
+(a) $$
+\begin{aligned}
+f_{Y}(y~\vert~\lambda) &= \int_{0}^{\infty} f_{X,Y}(x,y~\vert~\lambda) \text{d}x \\
+&= \int_{0}^{\infty}\frac{\lambda}{y} \exp\left\{-\frac{x}{y}-\lambda y\right\} \text{d}x \\
+&= \frac{\lambda}{y}\exp \{-\lambda y \}\int_{0}^{\infty} \exp\left\{-\frac{x}{y}\right\} \text{d}x \\
+&= \frac{\lambda}{y}\exp \{-\lambda y \} y \\
+&= \lambda \exp\{-\lambda y\} \quad \text{for} \quad y > 0 
+\end{aligned}
+$$
+Therefore the marginal distribution of $Y$ is exponential with rate $lambda$.
+
+(b) The conditional distribution
+ $$
+\begin{aligned}
+f_{X\vert Y}(x~\vert~y, \lambda) &= \frac{f_{X,Y}(x,y~\vert~\lambda)}{f_{Y}(y~\vert~\lambda)} \\
+&= \frac{\frac{\lambda}{y} \exp\left\{-\frac{x}{y}-\lambda y\right\}}{\lambda \exp\{-\lambda y\} } \\
+& = \frac{1}{y} \exp\left\{-\frac{x}{y}\right\} \quad \text{for} \quad x > 0 
+\end{aligned}
+$$
+Therefore the conditional distribution of $X\vert Y =y$ is exponential with rate $1/y$.
+
+(c) We can use the law of iterated expectation. Firstly, $E(X~\vert~Y) = Y$, and $E(Y) = \lambda^{-1}$ ,therefore $E(X) = E(E(X~\vert~Y)) = E(Y) = \lambda^{-1}$. For the variance, we can use the law of iterated variance $\text{Var}(X) = \text{Var}(E(X~\vert~Y)) + E(\text{Var}(X~\vert~Y)) = \text{Var}(Y) + E(Y^2) = 2\text{Var}(Y) + E(Y)^2 = 2\lambda^{-2} + \lambda^{-2} = 3\lambda^{-2}$.
+
+Note: The marginal distribution of $X$ is referred to as compound distribution or continuous mixture because one of it's (continuous) parameters has been assigned a probability density.
+
+***

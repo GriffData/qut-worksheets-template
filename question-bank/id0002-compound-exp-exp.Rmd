@@ -1,6 +1,6 @@
 Let the bivariate random variable $(X,Y)$ have probability density function (pdf)
 $$
-f_{X,Y}(x,y~\vert~\lambda) = \lambda y \exp\{-(x+\lambda)y\} \quad \text{for} \quad x>0,y>0.
+f_{X,Y}(x,y~\vert~\lambda) = \frac{\lambda}{y} \exp\left\{-\frac{x}{y}-\lambda y\right\} \quad \text{for} \quad x>0,y>0.
 $$
 
 (a) Find the marginal distribution for $Y$.

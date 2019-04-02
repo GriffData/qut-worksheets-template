@@ -7,4 +7,3 @@ Let $Y_{1}$ and $Y_{2}$ be Poisson random variable with means $\lambda_{1}$ and 
 (a) Write down the means and variances of $X$, $Y_{1}$, and $Y_{2}$.
 (b) Define $Z = X~Y_{1} + (1-X)~Y_{2}$. What is the mean and variance of $Z$?^[Note: The random variable $Z$ is a discrete mixture distribution.]
 (c) What is the probability mass function (pmf) of $Z$?^[Hint: Start by determining the pmf for $Z~\vert~X$ ($Z$ conditioned on the value of $X$).] 
-(d) What is the correlation between $Z$ and $Y_{1}$? What about $Z$ and $X$?

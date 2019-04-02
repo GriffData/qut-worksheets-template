@@ -1,0 +1,16 @@
+
+***
+*Solution*: 
+
+(a) The mean of a Bernoulli random variable is probability of success, $p$, therefore $E(X) = p$. The variance is $\text{Var}(X) = p(1-p)$. The mean and variance of a Poisson random variable is equal to the parameter $\lambda$. Therefore, $E(Y_{1}) = \text{Var}(Y_{1}) = \lambda_{1}$ and $E(Y_{2}) = \text{Var}(Y_{2}) = \lambda_{2}$.
+
+(b) Expectation: $E(Z) = E(XY_{1} + (1-X)Y_{2}) =  E(X)E(Y_{1}) + (1-E(X))E(Y_{2}) = p \lambda_{1} + (1-p)\lambda_{2}$ by linearity of the expectaiton and indepedence between $X$, $Y_{1}$, $Y_{2}$.
+
+Variance: We can show that $E(Z~\vert~X) = X\lambda_{1} + (1-X)\lambda_{2}$ and $\text{Var}(Z~\vert~X) = X\lambda_{1} + (1-X)\lambda_{2}$ also. Therefore, $\text{Var}(E(Z~\vert~X)) = p(1-p) \lambda_{1} +  p(1-p) \lambda_{2} = p(1-p)(\lambda_{1} +\lambda_{2})$ and $E(\text{Var}(Z~\vert~X)) = p\lambda_{1} + (1-p)\lambda_{2}$. Using the law of total variance then $\text{Var}(Z) = \text{Var}(E(Z~\vert~X)) + E(\text{Var}(Z~\vert~X)) =  p(1-p)(\lambda_{1} +\lambda_{2}) + p\lambda_{1} + (1-p)\lambda_{2}$ which can also be written as $\text{Var}(Z) = p(2-p)\lambda_{1} + (1-p^2)\lambda_{2}$.
+
+(c) Since it is a discrete mixture random variable, the probability mass function (pmf) is the probability of each component multiplied by the pmf of the component.
+$$
+f_{Z}(z~\vert~\lambda_{1},\lambda_{2})  = P(Z = z) = p \times  \frac{\lambda_{1}^{z}e^{-\lambda_{1}}}{z!} + (1-p) \times  \frac{\lambda_{2}^{z}e^{-\lambda_{2}}}{z!} \quad \text{for} \quad z = 0,1,2,...
+$$
+
+***

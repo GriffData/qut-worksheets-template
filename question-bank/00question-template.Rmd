@@ -1,6 +1,6 @@
 Question text here. Inline math: $x=1$ Display math: $$T = \sum_{i=1}^{n}y_{i}.$$
 
-## Subheading
+### Subheading
 
 R code...
 

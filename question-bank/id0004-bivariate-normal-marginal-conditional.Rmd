@@ -6,8 +6,8 @@ X_{2}
 \end{array}\right] \sim
 \text{N}\left(
 \left[\begin{array}{c} 
-\mu_{1}\\
-\mu_{2} 
+0\\
+0 
 \end{array}\right],
 \left[\begin{array}{cc} 
 \sigma^{2}_{1} & \rho\sigma_{1}\sigma_{2}\\
