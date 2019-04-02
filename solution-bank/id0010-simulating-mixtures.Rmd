@@ -58,6 +58,25 @@
 
 ```
 
+```{r sim-mix-a, cache=TRUE, echo=TRUE, eval=TRUE}
+  
+  # (b)
+
+  pmf_poisson_mix_2 <- function(z, lambda_1, lambda_2, p){
+    
+    p * dpois(x = z, lambda = lambda_1) + (1 - p) * dpois(x = z, lambda = lambda_2)
+    
+  }
+
+  pmix_samples_df <- tibble(z = pmix_samples)
+  
+  ggplot(data = pmix_samples_df, aes(x = z)) + 
+    geom_histogram(aes(y = ..density..), bins = 10) +
+    stat_function(fun = pmf_poisson_mix_2, args = list(lambda_1 = lambda_1, lambda_2 = lambda_2, p = p))
+    
+
+```
+
 ```{r sim-mix-c, cache=TRUE, echo=TRUE, eval=TRUE}
   
   # (c)
