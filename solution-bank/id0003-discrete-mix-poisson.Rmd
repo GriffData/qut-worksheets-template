@@ -10,7 +10,7 @@ Variance: We can show that $E(Z~\vert~X) = X\lambda_{1} + (1-X)\lambda_{2}$ and 
 
 (c) Since it is a discrete mixture random variable, the probability mass function (pmf) is the probability of each component multiplied by the pmf of the component.
 $$
-f_{Z}(z~\vert~\lambda_{1},\lambda_{2})  = P(Z = z) = p \times  \frac{\lambda_{1}^{z}e^{-\lambda_{1}}}{z!} + (1-p) \times  \frac{\lambda_{2}^{z}e^{-\lambda_{2}}}{z!} \quad \text{for} \quad z = 0,1,2,...
+f_{Z}(z~\vert~\lambda_{1},\lambda_{2},p)  = P(Z = z) = p \times  \frac{\lambda_{1}^{z}e^{-\lambda_{1}}}{z!} + (1-p) \times  \frac{\lambda_{2}^{z}e^{-\lambda_{2}}}{z!} \quad \text{for} \quad z = 0,1,2,...
 $$
 
 ***
