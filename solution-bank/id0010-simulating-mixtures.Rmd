@@ -58,4 +58,39 @@
 
 ```
 
+```{r sim-mix-c, cache=TRUE, echo=TRUE, eval=TRUE}
+  
+  # (c)
+
+  sim_poisson_mix <- function(lambda, p, n_samples = 1){
+
+    component_id <- sample(x = 1:length(lambda), 
+                           size = n_samples, 
+                           prob = p,
+                           replace = TRUE)
+    
+    z_pois <- rpois(n = n_samples, lambda = lambda[component_id])
+    
+    return(z_pois)
+    
+  }
+
+  mix_df <- tibble(
+    z = sim_poisson_mix(c(1,4,8,15),p = c(0.1,0.2,0.1,0.6), n_samples = 1000)
+  )
+  
+  ggplot(data = mix_df, aes(x = z)) +
+    geom_histogram(aes(y = ..density.. ), binwidth = 1, colour = "white") +
+    theme_bw()
+
+```
+
+```{r sim-mix-d, cache=TRUE, echo=TRUE, eval=TRUE}
+  
+  # (d)
+
+  
+
+```
+
 ***
