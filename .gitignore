@@ -4,6 +4,7 @@
 .Ruserdata
 *.html
 *.pdf
+!QUT_Logo_2Lines_CMYK.pdf
 *.log
 *.out
 *.gif
