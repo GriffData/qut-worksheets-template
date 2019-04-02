@@ -8,5 +8,6 @@
 *.log
 *.out
 *.gif
+*.tex
 *_cache/
 *_files/

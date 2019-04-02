@@ -93,7 +93,3 @@ If necessary, use your answers in the theory section of this worksheet to assist
 ```{r prac-question-5, child='../question-bank/id0005-multivariate-normal-anomaly-detection.Rmd', eval = TRUE}
   
 ```
-
-## Question 6
-
-simulating from some given joint distribution, then estimating say the marginal distributions from the samples using kde
