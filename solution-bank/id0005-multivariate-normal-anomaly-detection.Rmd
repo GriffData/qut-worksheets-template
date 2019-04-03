@@ -5,7 +5,7 @@
 
 (a) Assuming the multivariate normal distribution is correct, if we calculate the test-statistic $T_{i} = (\boldsymbol{X}_{i}-\boldsymbol{\mu})^{\top}\Sigma^{-1}(\boldsymbol{X}_{i}-\boldsymbol{\mu})$ it will have a Chi-square distribution. Therefore, any observations that are unlikely (with respect to the Chi-square distribution) warrant investigation. A Chi-square distribution with `df=3` has density
 
-```{r sols-id0005-chi-sq-density,  fig.margin = TRUE, fig.cap = "Chi-square distribution with df=3. Area with 0.01 probability of occuring in red.", fig.width=3.5, fig.height=3.5, cache=TRUE}
+```{r sols-id0005-chi-sq-density,  fig.margin = TRUE, fig.cap = "Chi-square distribution with df=3. Area with 0.01 probability of occuring in red.", fig.width=3.5, fig.height=3.5, cache=FALSE}
 
 pv <- 0.01
 cs_df <- 3

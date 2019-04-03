@@ -2,7 +2,7 @@
 ***
 *Solution*: 
 
-```{r sim-mix-a, cache=TRUE, echo=TRUE, eval=TRUE}
+```{r sim-mix-a, cache=FALSE, echo=TRUE, eval=TRUE}
   
   # (a)
 
@@ -68,7 +68,7 @@
 
 ```
 
-```{r sim-mix-,  fig.margin=TRUE, fig.width=4, fig.height=4, cache=TRUE, eval = TRUE, echo=TRUE, fig.cap= "Histogram of Poisson mixture distribution with two components and density overlayed."}
+```{r sim-mix-,  fig.margin=TRUE, fig.width=4, fig.height=4, cache=FALSE, eval = TRUE, echo=TRUE, fig.cap= "Histogram of Poisson mixture distribution with two components and density overlayed."}
   
   # (b)
 
@@ -95,7 +95,7 @@
 
 ```
 
-```{r sim-mix-c, fig.margin=TRUE, fig.width=4, fig.height=4, cache=TRUE, eval = TRUE, echo=TRUE, fig.cap= "Histogram of Poisson mixture distribution with four components"}
+```{r sim-mix-c, fig.margin=TRUE, fig.width=4, fig.height=4, cache=FALSE, eval = TRUE, echo=TRUE, fig.cap= "Histogram of Poisson mixture distribution with four components"}
   
   # (c)
 
