@@ -82,8 +82,7 @@
   ggplot() + 
     
     geom_histogram(aes(x = pmix_samples, y = ..density..), 
-                   binwidth = 1, colour = "white", 
-                   data = pmix_samples_df) +
+                   binwidth = 1, colour = "white") +
     
     stat_function(aes(x = 0:21), n = 22, geom = "point",
                   fun = pmf_poisson_mix_2, 
