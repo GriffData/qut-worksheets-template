@@ -98,6 +98,6 @@ If necessary, use your answers in the theory section of this worksheet to assist
   
 ```
 
-```{r prac-solution-5, child='../solution-bank/id0005-multivariate-normal-anomaly-detection.Rmd', eval = TRUE}
+```{r prac-solution-5, child='../solution-bank/id0005-multivariate-normal-anomaly-detection.Rmd', eval =  params$show_solution}
   
 ```

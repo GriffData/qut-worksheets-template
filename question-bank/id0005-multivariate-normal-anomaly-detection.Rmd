@@ -1,10 +1,10 @@
-Suppose you wish to detect anomalies in the production of life boats. Large defects need to be identified before the life boats are sent to ships where they are used to evacuate passengers.
-Three measurements (weight, rigidity, volume) of each life boat are recorded and sent to you for analysis. Suppose the measurements are assumed to follow a multivariate normal distribution with mean and covariance given in the `R` code below. 
+Suppose you wish to detect anomalies in the production of life boats. Large defects need to be identified before the life boats are sent to ships where they are used to evacuate passengers. 
+Three measurements (weight, rigidity, volume) of each life boat are recorded and sent to you for analysis. Suppose the measurements are assumed to follow a multivariate normal distribution with mean and covariance given in the `R` code below.^[Hint: If $\boldsymbol{X} \sim \text{N}(\boldsymbol{\mu},\Sigma)$ then $T= (\boldsymbol{X}-\boldsymbol{\mu})^{\top}\Sigma^{-1}(\boldsymbol{X}-\boldsymbol{\mu}) \sim \chi^{2}_{n}$, a Chi-squared distribution with degrees of freedom $n = \text{dim}(\boldsymbol{X})$. Extreme measurements will result in a large value for $T$, and a cutoff can be chosen such that it corresponds to a low probability region for the right-tail of the Chi-squared distribution. Use the function `qchisq(p = pv, df = 3, lower.tail = FALSE)` to find such a cutoff, where `pv` is a reasonable, user defined, small probability.]
 
-(a) Describe a rule to detect anomalies given this information^[Hint: If $\boldsymbol{X} \sim \text{N}(\boldsymbol{\mu},\Sigma)$ then $T= (\boldsymbol{X}-\boldsymbol{\mu})^{\top}\Sigma^{-1}(\boldsymbol{X}-\boldsymbol{\mu}) \sim \chi^{2}_{n}$, a Chi-squared distribution with degrees of freedom $n = \text{dim}(\boldsymbol{X})$. Extreme measurements will result in a large value for $T$, and a cutoff can be chosen such that it corresponds to a low probability region for the right-tail of the Chi-squared distribution. Use the function `qchisq(p = pv, df = 3, lower.tail = FALSE)` to find such a cutoff, where `pv` is a reasonable, user defined, small probability.].
+(a) Describe a rule to detect anomalies given this information.
 (b) Write a function to implement this test with inputs `boat_ms` (a vector of 3 boat measurements) and `pv` (the tuning parameter which is a small probability.).
-(b) Apply your rule to each element in the `test_set` vector below, to decide which (if any) are outliers.
-(c) Does your answer change if you use the sample mean and sample variance, rather than the given mean and variance values?^[Hint: `do.call("rbind",test_set)]` can convert the data to a `matrix` then use `var` and `colMeans` to calculate the sample information.] Why do you think that is?
+(c) Apply your rule to each element in the `test_set` vector below, to decide which (if any) are outliers.
+(d) Does your answer change if you use the sample mean and sample variance, rather than the given mean and variance values? Why do you think that is?^[Hint: `do.call("rbind",test_set)` can convert the data to a `matrix` then use `var` and `colMeans` to calculate the sample information.]
 
 ````{r mvn-anomalies, eval = F}
 
@@ -25,7 +25,7 @@ Three measurements (weight, rigidity, volume) of each life boat are recorded and
     c(12.17, 18.54, 61.68),
     c(8.93, 22.91, 62.28),
     c(11.69, 20.23, 61.23),
-    c(9.45, 19.74, 58.86)
+    c(9.45, 19.74, 58.86),
     c(10.04, 20.53, 59.06),
     c(8.88, 20.29, 59.64)
   )
