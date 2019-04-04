@@ -15,6 +15,7 @@ render_qands <- function(dir, rmd_file, out_file, knitr_params){
   
   sols_file_name <- paste0("solutions-", out_file)
   
+  # temporarily changes working directory so that links in docs are relative, not absolute
   withr::with_dir(
     new = dir,
     code =  {
@@ -48,14 +49,14 @@ render_qands <- function(dir, rmd_file, out_file, knitr_params){
 
 #### Compile one file ####
 
-  worksheet_number <- "01"
+  worksheet_number <- "02"
   
   upper_dir <- paste0("ws",worksheet_number)
   file_name <- paste0(ws_file_prefix, worksheet_number, ".Rmd")
   out_name <- paste0(ws_file_prefix, worksheet_number,".pdf")
   ws_dir <- here::here(upper_dir)
   
-  # render questions and solutions (temporarily change working directory)
+  # render questions and solutions
   render_qands(dir = ws_dir, 
                rmd_file = file_name, 
                out_file = out_name, 
