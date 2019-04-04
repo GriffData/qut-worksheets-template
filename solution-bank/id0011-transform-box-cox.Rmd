@@ -87,7 +87,7 @@ It's very difficult to see on this scale. Let's compare on the transformed scale
     theme_bw()
 
 ```
-The random samples (`z_sim`) from the normal distribution have a density which is somewhat bell-shaped. However, it does look less normal than the data we transformed. This is a problem to be aware of in small sized data since empirical estimates (such as KDEs) may have imperfections.
+The random samples (`z_sim`) from the normal distribution have a density which is somewhat bell-shaped. However, it does look relatively different to the data we transformed. This is a problem to be aware of in small sized data since empirical estimates (such as KDEs) may have imperfections. We can account for this by comparing the data to several simulated samples of the same size, to get an idea of the appropriateness of the transform. It is better to perform principled statistical methods that perform this procedure, see `forecast::BoxCox.lambda` for example, and then use graphical methods to check the performance.
 
 
 ***
