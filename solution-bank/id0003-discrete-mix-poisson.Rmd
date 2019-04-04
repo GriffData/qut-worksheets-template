@@ -6,7 +6,7 @@
 
 (b) The expectation and variance are
 
-    - Expectation: $E(Z) = E(XY_{1} + (1-X)Y_{2}) =  E(X)E(Y_{1}) + (1-E(X))E(Y_{2}) = p \lambda_{1} + (1-p)\lambda_{2}$ by linearity of the expectaiton and indepedence between $X$, $Y_{1}$, $Y_{2}$.
+    - Expectation: $E(Z) = E(XY_{1} + (1-X)Y_{2}) =  E(X)E(Y_{1}) + (1-E(X))E(Y_{2}) = p \lambda_{1} + (1-p)\lambda_{2}$ by linearity of the expectation and indepedence between $X$, $Y_{1}$, $Y_{2}$.
     - Variance: We can show that $E(Z~\vert~X) = X\lambda_{1} + (1-X)\lambda_{2} = X(\lambda_{1} - \lambda_{2}) + \lambda_{2}$, and
     - $\text{Var}(Z~\vert~X) = X^2\lambda_{1} + (1-X)^2\lambda_{2}$
     - Therefore, $\text{Var}(E(Z~\vert~X)) = \text{Var}(X)(\lambda_{1} - \lambda_{2})^2 = p(1-p)(\lambda_{1} - \lambda_{2})^2$, and
