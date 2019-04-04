@@ -74,8 +74,16 @@ params:
 
 # Practical questions
 
+Note: Question 5 practical relates back to Question 4 theory.
+
 ## Question 5
 
-```{r practical-question-5, child='../question-bank/id0011-transform-box-cox.Rmd', eval = TRUE}
+```{r practical-question-5, child='../question-bank/id0012-transform-simulate-sum-diff-gamma.Rmd', eval = TRUE}
+  
+```
+
+## Question 6
+
+```{r practical-question-6, child='../question-bank/id0011-transform-box-cox.Rmd', eval = TRUE}
   
 ```
