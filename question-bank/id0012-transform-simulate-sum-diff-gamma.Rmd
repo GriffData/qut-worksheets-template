@@ -1,7 +1,16 @@
-The random vector $(Y_1, Y_2~\vert~\theta) =  (X_1 + X_2, X_1 - X_2)$ where $X_{1}~\vert~\theta \sim \text{Gamma}(1/2,\theta)$ and $X_{2}~\vert~\theta \sim \text{Gamma}(1/2,\theta)$ are independent random variables, where $\theta$ is the scale parameter.
+Define the random vectors $(Y_1, Y_2) =  (X_1 + X_2, X_1 - X_2)$ and 
+$(Z_1, Z_2) =  \left(X_1 + X_2, \frac{X_1}{X_1 + X_2} \right)$ 
+where 
+$$
+\begin{aligned}
+X_{1}~\vert~\theta &\sim \text{Gamma}(1/2,2) \quad \text{and} \\
+X_{2}~\vert~\theta &\sim \text{Gamma}(1/2,2) 
+\end{aligned}
+$$
+are independent random variables.
 
-(a) Simulate from $(Y_1, Y_2~\vert~\theta=1)$ and plot the realisations. Based on this plot comment on the evidence for independence between the random variables. Calculate the correlation between $Y_1$ and $Y_2$, is it what you expect?
+(a) Simulate from $(Y_1, Y_2)$ and plot the realisations. Calculate the correlation between $Y_1$ and $Y_2$, is it what you expect?
 
-(b) Simulate $(Y_1, Y_2)$ from the distribution defined by $(Y_1, Y_2~\vert~\theta)$ where $\theta \sim \text{Exp}(1)$. Comment on the evidence for independence between the random variables. Calculate the correlation between $Y_1$ and $Y_2$, is it what you expect?
+(b) Simulate $(Z_1, Z_2)$ and plot the realisations. Comment on the evidence for independence between the random variables. Calculate the correlation between $Y_1$ and $Y_2$, is it what you expect?
 
-(c) Using part (b) approximate the marginal distribution with a kernel density estimator.
+(c) Using part (b) approximate the marginal distribution of $Z_2$ with a kernel density estimator (KDE). Plot your result.^[Hint: To perform KDE in `R` try `ggplot(data) + geom_density(aes(x=var))` or see the [`kdensity` tutorial](https://cran.r-project.org/web/packages/kdensity/vignettes/tutorial.html) tutorial for an alternative.]

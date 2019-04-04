@@ -1,0 +1,1 @@
+If $X$ has the uniform distribution on $[-1, 1]$, find the distribution^[Hint: use the CDF inversion technique, since this is $z = x^2$ is not a one-to-one function.] of $Z = X^2$. What is this distribution called?

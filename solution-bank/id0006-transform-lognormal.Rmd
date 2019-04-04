@@ -1,0 +1,21 @@
+
+***
+*Solution:*
+Let $W = \log X$ where $W \sim N(\mu, \phi)$ (i.e. $X = e^W$ has a lognormal distribution). The pdf of $W$ is 
+		$$
+			f(w) = \frac{1}{\sqrt{2\pi\phi}} e^{-\frac{1}{2\phi} \left(w - \mu \right)^2}, \qquad -\infty < w < \infty.
+		$$
+The inverse function of the transformation is $w(x) = \log x$. The function of the transformation is $x(w) = \exp\{w\}$ therefore the range of the new random variable is clearly $X > 0$. Using the 1-1 transformation formula, the required Jacobian is 
+		$$
+		\left\vert \frac{\partial w}{\partial x} \right\vert = \left|\frac{1}{x} \right| = \frac{1}{x} \qquad \text{ since } x > 0.
+		$$
+Hence, the pdf of the $X$ is given by
+$$
+		\begin{aligned}
+		g(x) &= f\left( w(x) \right) \left| \frac{dw}{dx} \right| \\
+		&= \frac{1}{x} \frac{1}{\sqrt{2\pi \phi}}e^{-\frac{1}{2\phi} \left( \log x - \mu \right)^2}, \qquad x >0
+		\end{aligned}
+$$
+where $\phi = \text{Var}(W)$.
+		
+***

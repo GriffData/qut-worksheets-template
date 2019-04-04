@@ -9,6 +9,8 @@ header-includes:
     - \usepackage{fancyhdr}
     - \usepackage{floatrow}
     - \floatsetup[figure]{capposition=top}
+    - \usepackage{tikz}
+    - \usepackage{pgfplots}
 params:
   tutor_name: "Chris"
   show_solutions: FALSE
@@ -50,7 +52,7 @@ params:
   
 ```
 
-```{r theory-solution-1, child='../solution-bank/00solution-template.Rmd', eval = params$show_solutions}
+```{r theory-solution-1, child='../solution-bank/id0006-transform-lognormal.Rmd', eval = params$show_solutions}
   
 ```
 
@@ -60,15 +62,28 @@ params:
   
 ```
 
-## Question 3
-
-```{r theory-question-3, child='../question-bank/id0008-transform-uniform-abs.Rmd', eval = TRUE}
+```{r theory-solution-2, child='../solution-bank/id0007-transform-gamma-exp.Rmd', eval = params$show_solutions}
   
 ```
+
+## Question 3
+
+```{r theory-question-3, child='../question-bank/id0008-transform-uniform-square.Rmd', eval = TRUE}
+  
+```
+
+```{r theory-solution-3, child='../solution-bank/id0008-transform-uniform-square.Rmd', eval = params$show_solutions}
+  
+```
+
 
 ## Question 4
 
 ```{r theory-question-4, child='../question-bank/id0009-transform-gamma-sum-diff.Rmd', eval = TRUE}
+  
+```
+
+```{r theory-solution-4, child='../solution-bank/id0009-transform-gamma-sum-diff.Rmd', eval = params$show_solutions}
   
 ```
 
@@ -82,8 +97,16 @@ Note: Question 5 practical relates back to Question 4 theory.
   
 ```
 
+```{r practical-solution-5, child='../solution-bank/id0012-transform-simulate-sum-diff-gamma.Rmd', eval = params$show_solutions}
+  
+```
+
 ## Question 6
 
 ```{r practical-question-6, child='../question-bank/id0011-transform-box-cox.Rmd', eval = TRUE}
+  
+```
+
+```{r practical-solution-6, child='../solution-bank/id0011-transform-box-cox.Rmd', eval = TRUE}
   
 ```
