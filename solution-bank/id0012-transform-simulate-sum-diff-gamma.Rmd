@@ -22,7 +22,7 @@
   
 ```
 
-From the theoretical section, we know that $Y_{1}$ and $Y_{2}$ are not indepedent, which can also be seen in the plot. The estimated correlation is relatively low, but even if it were zero we could not conclude that the random variables are independent. Correlation is only a measure of the linear dependence between random variables, hence correlation alone. Independence implies zero correlation but the reverse does not hold.
+From the theoretical section, we know that $Y_{1}$ and $Y_{2}$ are not indepedent, which can also be seen in the plot. The estimated correlation is relatively low, but even if it were zero we could not conclude that the random variables are independent. Correlation is only a measure of the linear dependence between random variables, hence zero correlation alone does not guarantee independence. In other words, independence implies zero correlation but the reverse does not hold.
 
 (b) 
 
@@ -43,7 +43,7 @@ From the theoretical section, we know that $Y_{1}$ and $Y_{2}$ are not indepeden
   
 ```
 
-The plot shows very little dependence, and the estimated correlation also suggests this. I expected the correlation to be smaller, but since this is a relatively small sample estimation error disrupts the interpretation. Repeating the exercise shows that is very close to zero on average. However, we can't conclude that $Z_{1}$ and $Z_{2}$ are independent conclusively unless we find their joint distribution analytically^[This is left as a self-exercise: show that $Z_{1}$ and $Z_{2}$ are in fact independent random variables.].
+The plot shows very little dependence, and the estimated correlation also suggests this. I expected the correlation to be smaller, but since this is a relatively small sample, estimation error could be responsible. Repeating the exercise can show that the correlation is very close to zero on average. However, we can't say that $Z_{1}$ and $Z_{2}$ are independent conclusively unless we find their joint distribution analytically^[This is left as a self-exercise: show that $Z_{1}$ and $Z_{2}$ are in fact independent random variables.].
 
 (c)
 
