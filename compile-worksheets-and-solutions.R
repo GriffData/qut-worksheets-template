@@ -9,6 +9,33 @@
 #
 #################################################################################
 
+#### Render questions and solutions function
+
+render_qands <- function(dir, rmd_file, out_file, knitr_params){
+  
+  sols_file_name <- paste0("solutions-", out_file)
+  
+  withr::with_dir(
+    new = dir,
+    code =  {
+            
+        rmarkdown::render(input = file_name,
+                          output_file = out_file,
+                          params = c(knitr_params, show_solutions = F)
+        )
+        
+        # knit worksheet answers
+        rmarkdown::render(input = file_name,
+                          output_file = sols_file_name,
+                          params = c(knitr_params, show_solutions = T)
+        )
+        
+      }
+  )
+  
+  
+}
+
 #### Params - always run ####
 
   knitr_params <- list(
@@ -25,28 +52,17 @@
   
   upper_dir <- paste0("ws",worksheet_number)
   file_name <- paste0(ws_file_prefix, worksheet_number, ".Rmd")
+  out_name <- paste0(ws_file_prefix, worksheet_number,".pdf")
   ws_dir <- here::here(upper_dir)
   
-  ws_file_loc <- here::here(
-    upper_dir,
-    file_name
-    )
-  
-  sols_file_name <- paste0("solutions-", sub(".Rmd", "", file_name), ".pdf")
-  
-  # knit worksheet questions
-  rmarkdown::render(input = ws_file_loc,
-                    output_dir = ws_dir,
-                    params = c(knitr_params, show_solutions = F) 
-                    )
-  
-  # knit worksheet answers
-  rmarkdown::render(input = ws_file_loc, 
-                    output_dir = ws_dir,
-                    output_file = sols_file_name,
-                    params = c(knitr_params, show_solutions = T) 
-                    )
-  
+  # render questions and solutions (temporarily change working directory)
+  render_qands(dir = ws_dir, 
+               rmd_file = file_name, 
+               out_file = out_name, 
+               knitr_params = knitr_params
+              )
+    
+    
 ####
   
   
@@ -58,26 +74,13 @@
     
     upper_dir <- paste0("ws",ws_num)
     file_name <- paste0(ws_file_prefix, ws_num, ".Rmd")
+    out_name <- paste0(ws_file_prefix, ws_num,".pdf")
     ws_dir <- here::here(upper_dir)
     
-    ws_file_loc <- here::here(
-      upper_dir,
-      file_name
-    )
-    
-    sols_file_name <- paste0("solutions-", sub(".Rmd", "", file_name), ".pdf")
-    
-    # knit worksheet questions
-    rmarkdown::render(input = ws_file_loc,
-                      output_dir = ws_dir,
-                      params = c(knitr_params, show_solutions = F) 
-    )
-    
-    # knit worksheet answers
-    rmarkdown::render(input = ws_file_loc, 
-                      output_dir = ws_dir,
-                      output_file = sols_file_name,
-                      params = c(knitr_params, show_solutions = T) 
+    render_qands(dir = ws_dir, 
+                 rmd_file = file_name, 
+                 out_file = out_name, 
+                 knitr_params = knitr_params
     )
     
   }

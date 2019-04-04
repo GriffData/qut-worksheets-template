@@ -2,7 +2,9 @@
 title: "MXN601 Worksheet 01"
 author: "Joshua Bon & Christopher Drovandi"
 date: "`r Sys.Date()`"
-output: tint::tintPdf
+output: 
+  tint::tintPdf:
+    keep_tex: TRUE
 bibliography: ../src/worksheets.bib
 link-citations: yes
 header-includes:
@@ -85,6 +87,7 @@ We will now practise simulating some mixture random variables in `R`.
 If necessary, use your answers in the theory section of this worksheet to assist you.
 
 ## Question 4
+
 ```{r prac-question-4, child='../question-bank/id0010-simulating-mixtures.Rmd', eval = TRUE}
   
 ```
@@ -94,6 +97,7 @@ If necessary, use your answers in the theory section of this worksheet to assist
 ```
 
 ## Question 5
+
 ```{r prac-question-5, child='../question-bank/id0005-multivariate-normal-anomaly-detection.Rmd', eval = TRUE}
   
 ```

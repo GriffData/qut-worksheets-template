@@ -6,17 +6,17 @@
   
   # (a)
 
-  sim_poisson_mix_2 <- function(lambda_1, lambda_2, p){
+  sim_poisson_mix_2 <- function(lambda1, lambda2, p){
     
     x_bernoulli <- rbinom(n = 1, size = 1, prob = p)
     
     if(x_bernoulli == 1L){
       
-      z_pois <- rpois(n = 1, lambda = lambda_1)
+      z_pois <- rpois(n = 1, lambda = lambda1)
     
     } else {
       
-      z_pois <- rpois(n = 1, lambda = lambda_2)
+      z_pois <- rpois(n = 1, lambda = lambda2)
       
     }
     
@@ -28,37 +28,37 @@
     
   }
 
-  lambda_1 <- 4
-  lambda_2 <- 10
+  lambda1 <- 4
+  lambda2 <- 10
   p <- 0.4
 
   pmix_samples <- replicate(n = 1000, 
-     sim_poisson_mix_2(lambda_1 = lambda_1, 
-                       lambda_2 = lambda_2, 
+     sim_poisson_mix_2(lambda1 = lambda1, 
+                       lambda2 = lambda2, 
                        p = p)
      )
 
 
   # theoretical mean and variance
-  mean_poisson_mix_2 <- function(lambda_1, lambda_2, p){
+  mean_poisson_mix_2 <- function(lambda1, lambda2, p){
     
-    p * lambda_1 + (1 - p) * lambda_2
-    
-  }
-  
-  var_poisson_mix_2 <- function(lambda_1, lambda_2, p){
-    
-    p * lambda_1 + (1 - p) * lambda_2 +  
-    p * (1 - p) * (lambda_1 - lambda_2)^2
+    p * lambda1 + (1 - p) * lambda2
     
   }
   
-  mean_poisson_mix_2(lambda_1 = lambda_1, 
-                     lambda_2 = lambda_2, 
+  var_poisson_mix_2 <- function(lambda1, lambda2, p){
+    
+    p * lambda1 + (1 - p) * lambda2 +  
+    p * (1 - p) * (lambda1 - lambda2)^2
+    
+  }
+  
+  mean_poisson_mix_2(lambda1 = lambda1, 
+                     lambda2 = lambda2, 
                      p = p)
   
-  var_poisson_mix_2(lambda_1 = lambda_1, 
-                    lambda_2 = lambda_2, 
+  var_poisson_mix_2(lambda1 = lambda1, 
+                    lambda2 = lambda2, 
                     p = p)
 
   
@@ -68,27 +68,26 @@
 
 ```
 
-```{r sim-mix-,  fig.margin=TRUE, fig.width=4, fig.height=4, cache=FALSE, eval = TRUE, echo=TRUE, fig.cap= "Histogram of Poisson mixture distribution with two components and density overlayed."}
+```{r sim-mix-b,  fig.margin=TRUE, fig.width=4, fig.height=4, cache=FALSE, eval = TRUE, echo=TRUE, fig.cap= "Histogram of Poisson mixture distribution with two components and density overlayed."}
   
   # (b)
 
-  pmf_poisson_mix_2 <- function(z, lambda_1, lambda_2, p){
+  pmf_poisson_mix_2 <- function(z, lambda1, lambda2, p){
     
-    p * dpois(x = z, lambda = lambda_1) + 
-      (1 - p) * dpois(x = z, lambda = lambda_2)
+    p * dpois(x = z, lambda = lambda1) + 
+      (1 - p) * dpois(x = z, lambda = lambda2)
     
   }
 
   ggplot() + 
-    
+    xlim(c(0,max(pmix_samples))) +
     geom_histogram(aes(x = pmix_samples, y = ..density..), 
-                   binwidth = 1, colour = "white", 
-                   data = pmix_samples_df) +
+                   binwidth = 1, colour = "white") +
     
-    stat_function(aes(x = 0:21), n = 22, geom = "point",
+    stat_function(aes(x = 0:max(pmix_samples)), n = max(pmix_samples)+1, geom = "point",
                   fun = pmf_poisson_mix_2, 
-                  args = list(lambda_1 = lambda_1, 
-                              lambda_2 = lambda_2, 
+                  args = list(lambda1 = lambda1, 
+                              lambda2 = lambda2, 
                               p = p)
                   )
     
