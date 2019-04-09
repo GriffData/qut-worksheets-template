@@ -1,0 +1,7 @@
+An architect can handle up to 3 projects at once. During any month there is a probability of 0.5 of acquiring one new project (to start the next month) provided the architect knows that the project can be handled, otherwise no new projects are acquired. That is, the architect decides to take the honourable course of not taking on a new project for the next month unless it is known that it can be handled. The architect makes the decision at the end of the month. Existing projects are equally-likely to finish by the start of the next month or to continue, independently of each other.
+
+(a) Obtain the transition matrix of the Markov chain with states being the number of projects the architect has in hand at the beginning of a month.
+
+(b) Obtain the stationary distribution and comment on whether you think the architect's strategy is good from their point of view!
+
+(c) Comment on the assumptions of this model.

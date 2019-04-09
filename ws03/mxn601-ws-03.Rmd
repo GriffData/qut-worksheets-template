@@ -66,6 +66,12 @@ params:
   
 ```
 
+## Question 4
+
+```{r theory-question-4, child='../question-bank/id0017-mc-architect-projects.Rmd', eval = TRUE}
+  
+```
+
 ## Question 5
 
 ```{r theory-question-5, child='../question-bank/id0016-mc-computer-parts.Rmd', eval = TRUE}
@@ -83,3 +89,5 @@ params:
 ```{r prac-solution-10, child='../solution-bank/00solution-template.Rmd', eval = params$show_solutions}
   
 ```
+
+Markov chain for slogan/quote/band name generator
