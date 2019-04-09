@@ -10,7 +10,7 @@
 #################################################################################
 
 path_to_ws <- "H:/Teaching/qut-mxn601-worksheets"
-
+#path_to_ws <- "~/Dropbox/QUT/MXN601 2020/qut-mxn601-worksheets/"
 
 #### Render questions and solutions function
 
