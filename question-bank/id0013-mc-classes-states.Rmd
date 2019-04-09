@@ -1,0 +1,41 @@
+Specify the classes of the following Markov chains, defined by transition matrices $P_{1}, P_{2}, \ldots, P_{5}$, and give their type (transient, positive or null recurrent) and their period.
+
+$$
+\begin{aligned}
+&P_{1} = \begin{bmatrix}
+0 & \frac{1}{2} & \frac{1}{2} \\
+\frac{1}{2} & 0 & \frac{1}{2} \\
+0 & \frac{1}{2} & \frac{1}{2}
+\end{bmatrix}
+\quad
+P_{2} = \begin{bmatrix}
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+\frac{1}{3} & \frac{1}{3} & 0 & \frac{1}{3} \\
+1 & 0 & 0 & 0 
+\end{bmatrix}
+\quad
+P_{3} = \begin{bmatrix}
+\frac{1}{2} & \frac{1}{2} & 0 \\
+0 & \frac{1}{2} & \frac{1}{2} \\
+\frac{1}{2} & \frac{1}{2} & 0
+\end{bmatrix}
+\\
+&P_{4} = \begin{bmatrix}
+\frac{1}{2} & 0 &  \frac{1}{2} & 0 & 0 \\
+\frac{1}{4} & \frac{1}{2} & \frac{1}{4} & 0 & 0 \\
+\frac{1}{2} & 0 &  \frac{1}{2} & 0 & 0 \\
+0 & 0 & 0 & \frac{1}{2} & \frac{1}{2} \\
+0 & 0 & 0 & \frac{1}{2} & \frac{1}{2} 
+\end{bmatrix}
+\quad
+P_{5} = \begin{bmatrix}
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & \frac{1}{2} & 0 & \frac{1}{2} & 0 & 0 \\
+\frac{1}{2} & 0 & 0 & 0 & \frac{1}{4} & \frac{1}{4} \\
+0 & \frac{1}{4} & 0 & \frac{1}{4} & \frac{1}{2} & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 
+\end{bmatrix}
+\end{aligned}
+$$
