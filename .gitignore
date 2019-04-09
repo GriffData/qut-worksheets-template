@@ -11,3 +11,4 @@
 *.tex
 *_cache/
 *_files/
+*.aux
