@@ -9,6 +9,9 @@
 #
 #################################################################################
 
+path_to_ws <- "H:/Teaching/qut-mxn601-worksheets"
+
+
 #### Render questions and solutions function
 
 render_qands <- function(dir, rmd_file, out_file, knitr_params){
@@ -54,7 +57,7 @@ render_qands <- function(dir, rmd_file, out_file, knitr_params){
   upper_dir <- paste0("ws",worksheet_number)
   file_name <- paste0(ws_file_prefix, worksheet_number, ".Rmd")
   out_name <- paste0(ws_file_prefix, worksheet_number,".pdf")
-  ws_dir <- here::here(upper_dir)
+  ws_dir <- paste(path_to_ws, upper_dir, sep = "/")
   
   # render questions and solutions
   render_qands(dir = ws_dir, 
@@ -76,7 +79,7 @@ render_qands <- function(dir, rmd_file, out_file, knitr_params){
     upper_dir <- paste0("ws",ws_num)
     file_name <- paste0(ws_file_prefix, ws_num, ".Rmd")
     out_name <- paste0(ws_file_prefix, ws_num,".pdf")
-    ws_dir <- here::here(upper_dir)
+    ws_dir <- file.path(path_to_ws, upper_dir)
     
     render_qands(dir = ws_dir, 
                  rmd_file = file_name, 
