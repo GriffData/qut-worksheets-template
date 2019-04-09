@@ -1,7 +1,5 @@
 Question text here. Inline math: $x=1$ Display math: $$T = \sum_{i=1}^{n}y_{i}.$$
 
-### Subheading
-
 R code...
 
 ```{r unique-id-chunk-1, cache=TRUE, echo=TRUE, eval=TRUE}
