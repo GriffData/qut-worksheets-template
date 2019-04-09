@@ -1,0 +1,22 @@
+
+***
+*Solution:*
+We are given the pdf of $W$ as
+		$$
+			f(w) = \frac{\lambda^n w^{n-1} e^{-\lambda w}}{\Gamma (n)}, \qquad w > 0.
+		$$
+		
+Let $Y = e^{-W}$ (and therefore $0 < y < 1$). So, $W = - \log Y$ and
+		$$
+		\left| \frac{dw}{dy} \right| = \left| -\frac{1}{y}\right| = \frac{1}{y} \qquad \text{ since } 0 < y < 1.
+		$$
+		
+Thus the pdf of $Y$ is
+$$
+		\begin{aligned}
+			f(y) &= \frac{ \lambda^n \left( -\log y \right)^{n - 1} e^{\lambda \log y}}{\Gamma(n)} . \frac{1}{y} \\
+			&= \frac{1}{\Gamma(n)} \lambda^n \left( -\log y \right)^{n - 1} y^{\lambda - 1}, \qquad 0 < y < 1.
+		\end{aligned}
+$$
+
+***

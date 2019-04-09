@@ -1,0 +1,58 @@
+
+***
+*Solutions:*
+
+(a)
+
+```{r id0012-solutions-a, fig.margin = TRUE, fig.cap = "$Y_1$ versus $Y_2$", fig.width=3.5, fig.height=3, cache=FALSE}
+  
+  library(ggplot2)
+  sample_size <- 500
+
+  x1 <- rgamma(n = sample_size, shape = 1/2, scale = 2)
+  x2 <- rgamma(n = sample_size, shape = 1/2, scale = 2)
+  
+  y1 <- x1 + x2
+  y2 <- x1 - x2
+  
+  ggplot() + geom_point(aes(x = y1, y = y2), alpha = 0.5) +
+    theme_bw()
+
+  cor(y1,y2)
+  
+```
+
+From the theoretical section, we know that $Y_{1}$ and $Y_{2}$ are not indepedent, which can also be seen in the plot. The estimated correlation is relatively low, but even if it were zero we could not conclude that the random variables are independent. Correlation is only a measure of the linear dependence between random variables, hence zero correlation alone does not guarantee independence. In other words, independence implies zero correlation but the reverse does not hold.
+
+(b) 
+
+```{r id0012-solutions-b, fig.margin = TRUE, fig.cap = "$Z_1$ versus $Z_2$", fig.width=3.5, fig.height=3, cache=FALSE}
+  
+  sample_size <- 500
+
+  x1 <- rgamma(n = sample_size, shape = 1/2, scale = 2)
+  x2 <- rgamma(n = sample_size, shape = 1/2, scale = 2)
+  
+  z1 <- x1 + x2
+  z2 <- x1 / (x1 + x2)
+  
+  ggplot() + geom_point(aes(x = z1, y = z2), alpha = 0.5) +
+    theme_bw()
+
+  cor(z1,z2)
+  
+```
+
+The plot shows very little dependence, and the estimated correlation also suggests this. I expected the correlation to be smaller, but since this is a relatively small sample, estimation error could be responsible. Repeating the exercise can show that the correlation is very close to zero on average. However, we can't say that $Z_{1}$ and $Z_{2}$ are independent conclusively unless we find their joint distribution analytically^[This is left as a self-exercise: show that $Z_{1}$ and $Z_{2}$ are in fact independent random variables.].
+
+(c)
+
+```{r id0012-solutions-c, fig.margin = TRUE, fig.cap = "Maringal density of $Z_2$ using KDE.", fig.width=2.5, fig.height=2, cache=FALSE}
+  
+  ggplot() + 
+    geom_density(aes(x = z2)) +
+    theme_bw()
+  
+```
+
+***

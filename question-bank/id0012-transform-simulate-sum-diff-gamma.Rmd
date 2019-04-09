@@ -1,0 +1,16 @@
+Define the random vectors $(Y_1, Y_2) =  (X_1 + X_2, X_1 - X_2)$ and 
+$(Z_1, Z_2) =  \left(X_1 + X_2, \frac{X_1}{X_1 + X_2} \right)$ 
+where 
+$$
+\begin{aligned}
+X_{1} &\sim \text{Gamma}(1/2,2) \quad \text{and} \\
+X_{2} &\sim \text{Gamma}(1/2,2) 
+\end{aligned}
+$$
+are independent random variables.
+
+(a) Simulate from $(Y_1, Y_2)$ and plot the realisations. Estimate the correlation between $Y_1$ and $Y_2$ from the samples, is it what you expect?
+
+(b) Simulate $(Z_1, Z_2)$ and plot the realisations. Comment on the evidence for independence between the random variables. Estimate the correlation between $Y_1$ and $Y_2$, is it what you expect?
+
+(c) Using part (b) approximate the marginal distribution of $Z_2$ with a kernel density estimator (KDE). Plot your result.^[Hint: To perform KDE in `R` try `ggplot(data) + geom_density(aes(x=var))` or see the [`kdensity` tutorial](https://cran.r-project.org/web/packages/kdensity/vignettes/tutorial.html) for an alternative.]

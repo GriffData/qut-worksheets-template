@@ -1,0 +1,17 @@
+
+***
+*Solution:*
+If $x \in [-1,1]$ then clearly $z \in [0,1]$.
+If $X \sim \text{U}(-1,1)$ then the CDF is $P(X < x) = (x + 1)/2$ for $x \in [0,1]$.
+The CDF for $Z$ can be written as 
+$$
+\begin{aligned}
+P(Z < z) = P(X^2 < z) & = P(- \sqrt{z} < X < \sqrt{z}) \\
+& = P( X < \sqrt{z} ) - P(X < - \sqrt{z}) \\
+& =  (\sqrt{z} + 1)/2 - (-\sqrt{z} + 1)/2 \\
+& = \sqrt{z} \quad \text{for} \quad z \in [0,1]
+\end{aligned}
+$$
+The pdf for $Z$ is therefore $\frac{\partial}{\partial z} P(Z < z) = \frac{z^{-1/2}}{2}$ for $z \in [0,1]$. This is a $\text{Beta}(1/2,1)$ distribution.
+
+***
