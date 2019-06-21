@@ -7,6 +7,7 @@ Developed by Joshua Bon.
 Install these in packages in `R` before you get started:
 
 `install.packages("tint", dependencies = TRUE)`
+`install.packages("withr", dependencies = TRUE)`
 
 This might not be exhaustive.
 

@@ -4,13 +4,23 @@
 # process of making a question sheet and answer sheet at the same time with the
 # correct naming conventions etc.
 #
-# Make sure you have the "here" package installed.
-# install.packages("here")
+# Make sure you have the "withr" package installed and "tint".
 #
 #################################################################################
 
-path_to_ws <- "H:/Teaching/qut-mxn601-worksheets"
-#path_to_ws <- "~/Dropbox/QUT/MXN601 2020/qut-mxn601-worksheets/"
+#### edit these before use ####
+
+  path_to_ws <- "ADD/PATH/HERE"
+  
+  knitr_params <- list(
+    tutor_name = "TUTORNAME"
+  )
+  
+  ws_file_prefix <- "UNITCODE-ws-"
+
+####
+
+
 
 #### Render questions and solutions function
 
@@ -39,14 +49,6 @@ render_qands <- function(dir, rmd_file, out_file, knitr_params){
   
   
 }
-
-#### Params - always run ####
-
-  knitr_params <- list(
-    tutor_name = "Chris"
-  )
-  
-  ws_file_prefix <- "mxn601-ws-"
 
 ####
 
