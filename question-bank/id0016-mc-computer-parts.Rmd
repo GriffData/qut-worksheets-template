@@ -1,2 +1,0 @@
-A component of a computer has an active life measured in discrete units, say months, that is a random variable $T$ where $P(T=k) = 0.25$, for $k \in \{1,2,3,4\}$. Suppose one starts with a fresh component and each component is replaced by a new component upon failure. Let $X_{n}$ be the age of the component in service at time $n$. $X_{n}$ is a Markov chain remembering that $p_{ij} = P(X_{n} = j ~\vert~ X_{n-1} = i)$ i.e. remember that $p_{ij}$ are conditional probabilities.
-Show that on average there are 2.5 months between new components.

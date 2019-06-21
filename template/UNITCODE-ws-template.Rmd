@@ -1,6 +1,6 @@
 ---
-title: "MXN601 Worksheet 09"
-author: "Joshua Bon & Christopher Drovandi"
+title: "UNITCODE Worksheet NUMBER"
+author: "AUTHOR"
 date: "`r Sys.Date()`"
 output: tint::tintPdf
 bibliography: ../src/worksheets.bib
@@ -10,7 +10,7 @@ header-includes:
     - \usepackage{floatrow}
     - \floatsetup[figure]{capposition=top}
 params:
-  tutor_name: "Chris"
+  tutor_name: "TUTORNAME"
   show_solutions: FALSE
 ---
 
@@ -58,13 +58,12 @@ params:
 
 # Practical questions
 
-**Question 10**
+**Question 2**
 
-```{r prac-question-10, child='../question-bank/00question-template.Rmd', eval = TRUE}
+```{r prac-question-2, child='../question-bank/00question-template.Rmd', eval = TRUE}
   
 ```
 
-```{r prac-solution-10, child='../solution-bank/00solution-template.Rmd', eval = params$show_solutions}
+```{r prac-solution-2, child='../solution-bank/00solution-template.Rmd', eval = params$show_solutions}
   
 ```
-

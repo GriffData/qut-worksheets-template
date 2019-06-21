@@ -1,5 +1,0 @@
-Suppose that an individual of unknown genetic makeup is mated with a hybrid^[Markov chains are used in the study of probabilities connected to genetic models. Genes come in pairs; and for any trait governed by a pair of genes, an individual may have genes of the geno type GG (dominant), Gg (hybrid), or gg (recessive). Each offspring inherits one gene of a pair from each parent, at random and independently.]. If the unknown is dominant (GG) and is mated with a hybrid (Gg), the offspring has a probability of $\frac{1}{2}$ being dominant and probability of $\frac{1}{2}$ of being hybrid. If two hybrids are mated, the offspring may be dominant, hybrid, or recessive with probabilities, $\frac{1}{4}$, $\frac{1}{2}$ and $\frac{1}{4}$ respectively. If the unknown is recessive (gg), the offspring of it and a hybrid has a probability of $\frac{1}{2}$ of being recessive and a probability of $\frac{1}{2}$ of being hybrid. 
-
-(a) Set up a transition matrix to describe the possible states of a resulting offspring and their probabilities.
-
-(b) What will happen to the genetic makeup of the offspring after many generations of mating with a hybrid?

@@ -1,8 +1,0 @@
-Let the bivariate random variable $(X,Y)$ have probability density function (pdf)
-$$
-f_{X,Y}(x,y~\vert~\lambda) = \frac{\lambda}{y} \exp\left\{-\frac{x}{y}-\lambda y\right\} \quad \text{for} \quad x>0,y>0.
-$$
-
-(a) Find the marginal distribution for $Y$.
-(b) Hence, find the pdf of the conditional distribution $X~\vert~Y$.
-(c) Hence or otherwise, find the mean and variance of the marginal distribuion of $X$.

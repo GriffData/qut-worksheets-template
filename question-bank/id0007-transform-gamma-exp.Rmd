@@ -1,5 +1,0 @@
-$W$ has a gamma distribution with probability density function given by
-$$
-f_{W}(w~\vert~\lambda) = \frac{\lambda^{n}w^{n-1}e^{-\lambda w}}{\Gamma(n)}, \quad w > 0.
-$$
-Obtain the probability density function of $Y = e^{-W}$ and the range of $Y$.
