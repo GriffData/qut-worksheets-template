@@ -1,6 +1,14 @@
-# Worksheets for MXN601
+# Worksheets for template for QUT.
 
-Developed by Joshua Bon and Chris Drovandi.
+Developed by Joshua Bon.
+
+## Required packages
+
+Install these in packages in `R` before you get started:
+
+`install.packages("tint", dependencies = TRUE)`
+
+This might not be exhaustive.
 
 ## Project structure
 
