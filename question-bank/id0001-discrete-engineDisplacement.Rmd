@@ -4,11 +4,3 @@
 ```{r}
 
 ```
-
-
-
-*   Is the Pareto plot in the example above useful, what information does it give you and how (if at all) could it be modified to identify which manufacturers made the most fuel efficient cars?
-*   Use <tt>ggplot</tt> to produce an appropriate graphical summary to identify which manufacturers produce the most fuel efficient cars. 
-```{r}
-
-```
