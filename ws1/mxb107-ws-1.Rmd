@@ -1,6 +1,6 @@
 ---
 title: "MXB107 Worksheet 1"
-author: "Lachlan Griffin"
+author: "Gentry White, Andy Jones, Steven Kedda & Lachlan Griffin"
 date: "`r Sys.Date()`"
 output: tint::tintHtml
 bibliography: ../src/worksheets.bib
@@ -34,36 +34,39 @@ params:
 
 ```
 
-> Hellow world
+> The simple graph has brought more information to the data analyst’s mind than any other device
 >
-> `r tint::quote_footer('---PERSON')` 
+> `r tint::quote_footer('---John Tukey')` 
 
 ```{r instructions-header, child='../src/instructions-header.Rmd', eval = FALSE, echo=FALSE}
   
 ```
 
+
 # Recap: SECTION
 
 # Theory questions
 
-**Question 1**
-
-```{r theory-question-1, child='../question-bank/00question-template.Rmd', eval = TRUE}
-  
-```
-
-```{r theory-solution-1, child='../solution-bank/00solution-template.Rmd', eval = params$show_solutions}
+```{r theory-question, child='../question-bank/idwk01T.Rmd', eval = TRUE}
   
 ```
 
 # Practical questions
 
-**Question 2**
+**Question 1**
 
-```{r prac-question-2, child='../question-bank/00question-template.Rmd', eval = TRUE}
+```{r prac-question-1, child='../question-bank/idwk0101-automaticComparison.Rmd', eval = TRUE}
   
 ```
 
-```{r prac-solution-2, child='../solution-bank/00solution-template.Rmd', eval = params$show_solutions}
+**Question 2**
+
+```{r prac-question-2, child='../question-bank/idwk0102-engineDisplacement.Rmd', eval = TRUE}
+  
+```
+
+**Question 3**
+
+```{r prac-question-3, child='../question-bank/idwk0103-efficiencyPlot.Rmd', eval = TRUE}
   
 ```
