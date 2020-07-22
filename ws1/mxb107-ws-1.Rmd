@@ -32,6 +32,10 @@ params:
   #
   #
 
+  htmltools::img(src = knitr::image_uri("C:/Users/lachl/Documents/GitHub/qut-worksheets-template/figures/QUTLogo.png"), 
+               alt = 'logo', 
+               style = 'position:absolute; top:0; right:0; padding:10px;')
+
 ```
 
 > The simple graph has brought more information to the data analyst’s mind than any other device
@@ -41,9 +45,6 @@ params:
 ```{r instructions-header, child='../src/instructions-header.Rmd', eval = FALSE, echo=FALSE}
   
 ```
-
-
-# Recap: SECTION
 
 # Theory questions
 
