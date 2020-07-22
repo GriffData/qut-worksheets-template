@@ -1,0 +1,141 @@
+##    Best Practices for Graphical Summaries of Data
+
+Depending on how we create graphical depictions of data we can alter the viewers impression of the data, in other words if a picture is worth a thousand words, then how we make the picture can change the story.  Ideally we want our graphical summaries to be as objective as possible, we want the data to speak for themselves.  There are no hard and fast rules for creating graphical summaries, but there are some basic principles to follow.  
+
+* Always have a title for your graphical summary. Titles should accurately describe the variables and the relationship shown in the summary.  If one of the axes is time or the data are for a specific time period that should be in the title. 
+* Clearly label the axes and include units.
+* When comparing two data sets the axes for each summary should match. 
+
+There are other principles and rules of thumb that apply to specific type of plots that will be addressed as we work thorugh these workshop exercises. 
+
+###   Lecture Examples  
+Let's examine choices that we can make in relationship to the examples from Week 1. 
+
+First we are going to load the R package "tideyverse".  
+```{r}
+library(tidyverse)
+```
+The <tt>vehicles.csv</tt> file is a data set of fuel economy information about cars sold in the US between 1984 and 2021. We are going to load the complete data set and then create a smaller more manageable subset of the data for our purposes. 
+```{r}
+
+tmp<-read.csv("C:/Users/lachl/Downloads/vehicles.csv")
+
+##  These next lines manipulate a complex string variable to create a ##  simpler variable.
+
+trans<-strsplit(as.character(tmp$trany)," ")
+trans_type<-unlist(lapply(trans, function(x) x[1]))
+```
+Note that in the command "read.csv()" you will need to make sure you have the complete file path name to where you saved <tt>vehicles.csv</tt>.
+Now we create the object (called a tibble or data frame) called "epa_data" that we will use to create the figures.
+```{r}
+epa_data<-tibble(city = tmp$city08, hwy=tmp$highway08,
+                     cyl = tmp$cylinders, disp = tmp$displ, 
+                     drive = tmp$drive, make = tmp$make, 
+                     model = tmp$model,trans = trans_type, 
+                     year = tmp$year)
+```
+###   Creating the Pareto Plot 
+To create the Pareto plot in Example 1.5.2 we first have to load the <tt>ggplot2</tt> package.  This is a very powerful package for producing very nice (aesthetically pleasing) plots. THe syntax can be confusing, but for now think of the <tt>ggplot2</tt> commands as adding layers to a picture. 
+
+The simplest way to make a barplot is to just use <tt>geom_bar()</tt>:
+
+```{r}
+ggplot(epa_data,aes(make))+
+  geom_bar(stat = "count")
+```
+
+But this is ugly, first of all there are:
+
+```{r}
+length(unique(epa_data$make))
+```
+138 different makes represented in the data set, this makes the $x$-axis unreadable.
+
+* What are some other problems with this chart?
+* What if any information can you gather from this chart?
+* What should you do to improve this chart and make it more informative?
+
+Note that it probably makes more sense to look at only the major manufacturers.
+The first step is to create a data structure we will call <tt>Make</tt> which will contain the top ten most common makes of cars in <tt>epa_data</tt>.
+
+```{r}
+library(ggplot2)
+
+##  We are using the table command to make a table with the names of 
+##  all the makes of car and the number of times they appear 
+
+mtbl<-table(epa_data$make)
+
+##  Use tibble() to create a data frame called "Make"
+
+Make<-tibble(make = names(mtbl),Freq =as.numeric(mtbl))
+
+##  The order() function sorts the data in order of decreasing frequency
+
+Make<-Make[order(-Make$Freq),]
+
+##  Now make sure that the make names are reordered by decreasing frequency
+
+Make$make<-with(Make,reorder(Make$make,-Freq))
+
+##  Choose only the top 10 manufacturers
+
+Make<-Make[1:10,]
+
+```
+Now let's see what the bar plot looks like
+```{r}
+ggplot(Make,aes(x = Make$make))+
+  geom_bar(aes(y = Freq),stat = "identity")
+```
+
+Now, add appropriate labels for the axes, and a title to the plot:
+
+```{r}
+
+ggplot(Make,aes(x = Make$make))+
+  geom_bar(aes(y = Make$Freq),stat = "identity")
+```
+
+###   Creating the Line Plot
+To create a line plot showing how EPA ratings for fuel economy while driving on the highway have changed we could simply use <tt>ggplot()</tt> to create a generic plot for <tt>epa_data</tt> with "year" for the $x$-axis and "hwy" for the $y$-axis. Then add a line with <tt>geom_line()</tt>.
+```{r}
+ggplot(epa_data,aes(x = year, y = city))+
+  geom_line()
+```
+But these results are confusing and difficult to understand, 
+
+* What are some other problems with this chart?
+* What if any information can you gather from this chart?
+* What should you do to improve this chart and make it more informative?
+
+Use the <tt>ggplot</tt> function <tt>stat_summary</tt> to plot the average value of "hwy" for each year, and add appropriate title, and labels for the axes.
+```{r}
+ggplot(epa_data,aes(x = year, y = city))
+```
+
+Try changing now plot the maximum value of ``hwy'' for each year.  What changes?
+
+###   Histograms
+
+The line plot shows the trends over time in the average EPA City fuel economy ratings, but if we want to look more closely at a specific year to see the distribution or density of EPA City fuel economy ratings we need to use a histogram.  
+
+```{r}
+ggplot(epa_data[epa_data$year==1990,],aes(city))+
+  geom_histogram()
+```
+
+Let's compare the histogram of "city" to "hwy".  To do this we will need to use the package <tt>gridExtra</tt>
+```{r}
+library(gridExtra)
+city.plot<-ggplot(epa_data[epa_data$year==1990,],aes(city))+
+  geom_histogram()
+hwy.plot<-ggplot(epa_data[epa_data$year==1990,],aes(hwy))+
+  geom_histogram()
+
+grid.arrange(city.plot,hwy.plot,nrow = 1, ncol = 2)
+```
+Is this a fair comparison? What principles of good graphical summaries does this violate?
+
+*Identify what needs to be done to make sure that this plot conforms with the best principles for graphical summaries and make the changes.
+* Adjust the bin width for the two charts and see how this changes your interpretation of the data. 
