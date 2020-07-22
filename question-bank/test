@@ -1,0 +1,5 @@
+*   If you wanted to compare the fuel economy for manual versus automatic transmissions what would you need to do, and which graphical summary would you use?
+*   Use <tt>ggplot</tt> to produce this graphical summary. 
+```{r}
+
+```
