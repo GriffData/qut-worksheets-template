@@ -1,8 +1,8 @@
 ---
-title: "UNITCODE Worksheet NUMBER"
-author: "AUTHOR"
+title: "MXB107 Worksheet 1"
+author: "Lachlan Griffin"
 date: "`r Sys.Date()`"
-output: tint::tintPdf
+output: tint::tintHtml
 bibliography: ../src/worksheets.bib
 link-citations: yes
 header-includes:
@@ -10,7 +10,7 @@ header-includes:
     - \usepackage{floatrow}
     - \floatsetup[figure]{capposition=top}
 params:
-  tutor_name: "TUTORNAME"
+  tutor_name: "Andy"
   show_solutions: FALSE
 ---
 
@@ -34,7 +34,7 @@ params:
 
 ```
 
-> QUOTE
+> Hellow world
 >
 > `r tint::quote_footer('---PERSON')` 
 
